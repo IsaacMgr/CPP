@@ -13,7 +13,7 @@ class Parent
         }
         Parent(int x)
         {
-            this->x=x;
+            this->x=x;//first x is of protected int x and second x is of parent(int x)
             cout<<"\nInside parametarized constructor of parent"<<endl;
         }
         void displayparent()

@@ -13,7 +13,7 @@ class Parent
         }
         Parent(int x)
         {
-            this->x=x;
+            this->x=x;//first x is of protected int x and second x is of parent(int x)
             cout<<"\nInside parametarized constructor of parent"<<endl;
         }
         void displayParent()
@@ -34,7 +34,7 @@ class Child:public Parent
 
 Child(int x,int y):Parent(x)
 {
-    this->y=y;
+    this->y=y;//first y is of private int y and second y is of Child(int x,int y)
     cout<<"\nInside parametarized constructor of child"<<endl;
 }
 void displaychild()

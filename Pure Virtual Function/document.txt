@@ -1,0 +1,4 @@
+->Pure virtual function is a virtual function without any definition
+->A member function is declared a pure virtual function if it doesnot have any implementation respective to 
+that class and all of its derived classes must have that member function.
+->It can be defined as:Virtual returntype functionName(parameterlist)=0;
