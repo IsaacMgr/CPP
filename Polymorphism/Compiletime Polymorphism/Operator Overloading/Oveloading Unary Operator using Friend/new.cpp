@@ -4,11 +4,13 @@ using namespace std;
 
 class Complex
 {
+    protected:
     int real,img;
     public:
-        Complex
+        Complex()
         {
-
+            real=0;
+            img=0;
         }
         Complex(int x,int i)
         {
@@ -19,14 +21,14 @@ class Complex
         {
             cout<<"\nReal="<<real<<endl<<"Img="<<img<<endl;
         }
-        friend Complex operator -(Complex );
+        friend Complex operator-(Complex );
 };
 
-Complex operator -(Complex C)
+Complex operator-(Complex C)
 {
     Complex temp;
-    temp.real=C.real;
-    temp.img=C.img;
+    temp.real=-C.real;
+    temp.img=-C.img;
     return temp;
 }
 
