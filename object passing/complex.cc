@@ -29,5 +29,8 @@ void Complex::displaydetails()
 void Complex::add(Complex c1,Complex c2)
 {
     real=c1.real+c2.real;
+
+    
+    
     imaginary=c1.imaginary+c2.imaginary;
 }

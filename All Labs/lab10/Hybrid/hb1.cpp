@@ -49,7 +49,7 @@ class Employee:public Person
         void setemployee()
         {
             setperson();
-            cout<<"\nEnter the destination:";;
+            cout<<"\nEnter the destination:";
             cin>>destination;
             cout<<"\nEnter the id:"<<endl;
             cin>>id;

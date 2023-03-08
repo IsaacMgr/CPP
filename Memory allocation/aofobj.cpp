@@ -26,16 +26,16 @@ int main()
     cout<<"Enter the total number of the student:";
     cin>>size;
     Student *ptr=NULL;
-    ptr=new Student[size];
+    ptr=new Student[50];
     for(i=0;i<size-1;i++)
     {
-        *(ptr+i)->set();
+        (ptr+i)->set();
     }
     for(i=0;i<=size-1;i++)
     {
-        *(ptr+i)->display();
+        (ptr+i)->display();
     }
-    delete ptr;
+    delete []ptr;
     ptr=NULL;
     return 0;
 

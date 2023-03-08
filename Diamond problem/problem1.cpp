@@ -1,97 +1,115 @@
-//diamond problem using constructor
+//university ,affiliated college problem
+//using constructor
 #include <iostream>
 #include <string.h>
 using namespace std;
-class UNIVERSITY
+
+class University
 {
     protected:
-        char name[50],location[50];
+        char name[50];
+        char location[50];
     public:
-        UNIVERSITY()
+        University()
         {
-            strcpy(name,"");
-            strcpy(location,"");
+            strcpy(name," ");
+            strcpy(location," ");  
         }
-        UNIVERSITY(char Uname[],char Ulocation[])
+        University(char Uname[],char Ulocation[])
         {
             strcpy(name,Uname);
             strcpy(location,Ulocation);
         }
-        void displayUniversity()
+        void displayuniversity()
         {
-            cout<<"Name:"<<name<<endl<<"Location:"<<location<<endl;
+            cout<<"University Name:"<<name<<"University Location:"<<location<<endl;
         }
 };
-class AFFILIATED_COLLEGE:virtual public UNIVERSITY
+
+class Affiliated_college:virtual public University
 {
     protected:
-        char name[50],address[50];
-        int no_of_programs;
+        char name[50];
+        char address[50];
     public:
-        AFFILIATED_COLLEGE()
+        Affiliated_college()
         {
-
+            strcpy(name," ");
+            strcpy(address," ");
         }
-        AFFILIATED_COLLEGE(char Uname[],char Ulocation[],char Aname[],char Aaddress[],int Ano_of_programs):UNIVERSITY(Uname,Ulocation)
+        Affiliated_college(char Uname[],char Ulocation[],char Aname[],char Aaddress[]):University(Uname,Ulocation)
         {
             strcpy(name,Aname);
             strcpy(address,Aaddress);
-            no_of_programs=Ano_of_programs;
         }
-        void displayAcollege(){
-            cout<<"Affiliated College:"<<name<<endl<<"Affiliated College address:"<<address<<endl;
-        }
-};
-class CONSTITUENT_COLLEGE:virtual public UNIVERSITY
-{
-    protected:
-        char school[50],dean[50],name_of_program[50];
-    public:
-        CONSTITUENT_COLLEGE()
+        void displayaffiliated()
         {
+            cout<<"Affiliated college name:"<<name<<endl<<"Affiliated college address:"<<address<<endl;
 
         }
-        CONSTITUENT_COLLEGE(char Uname[],char Ulocation[],char Cschool[],char Cdean[],char Cname__of_program[]):UNIVERSITY(Uname,Ulocation)
+};
+
+class Constituent_college:virtual public University
+{
+    protected:
+        char school[50];
+        char dean[50];
+        char nameof_program[50];
+    public:
+        Constituent_college()
+        {
+            strcpy(school," ");
+            strcpy(dean," ");
+            strcpy(nameof_program," ");
+
+        }
+        Constituent_college(char Uname[],char Ulocation[],char Cschool[],char Cdean[],char Cnameof_program[]):University(Uname,Ulocation)
         {
             strcpy(school,Cschool);
             strcpy(dean,Cdean);
-            strcpy(name_of_program,Cname__of_program);
+            strcpy(nameof_program,Cnameof_program);
         }
-        void displayCcollege()
+        void displayconstituent()
         {
-            cout<<"Constituent college:"<<school<<endl<<"Dean of college:"<<dean<<endl<<"Name of the program:"<<name_of_program<<endl;
-        }
-};
-class STUDENT:public AFFILIATED_COLLEGE,public CONSTITUENT_COLLEGE
-{
-        char name[50],program[50];
-        int enrolled_year;
-    public:
-        STUDENT()
-        {
+            cout<<"Constituent school:"<<school<<endl<<"Constituent college dean:"<<dean<<endl<<"Constituent college name of program:"<<nameof_program<<endl;
 
         }
-        STUDENT(char Uname[],char Ulocation[],char Aname[],char Aaddress[],int Ano_of_programs,char Cschool[],char Cdean[],char Cname_of_program[],char Sname[],char Sprogram[], int enrolled_year):AFFILIATED_COLLEGE(Uname,Ulocation,Aname,Aaddress,Ano_of_programs),CONSTITUENT_COLLEGE(Uname,Ulocation,Cschool,Cdean,Cname_of_program)
+
+};
+
+class Student:public Affiliated_college,public Constituent_college
+{
+    protected:
+        char name[50];
+        char program[50];
+        int enrolled_year;
+    public:
+        Student()
+        {
+            strcpy(name," ");
+            strcpy(program," ");
+            enrolled_year=0;
+        }
+        Student(char Uname[],char Ulocation[],char Aname[],char Aaddress[],char Cschool[],char Cdean[],char Cnameof_program[],char Sname[],char Sprogram[],int Senrolled_year):Affiliated_college( Uname, Ulocation, Aname, Aaddress),Constituent_college(Uname, Ulocation, Cschool, Cdean, Cnameof_program),University(Uname,Ulocation)//University pani lekhnu parchha
         {
             strcpy(name,Sname);
             strcpy(program,Sprogram);
-            this->enrolled_year=enrolled_year;
+            enrolled_year=Senrolled_year;//esma dhyan dineyy
         }
-        void displayStudent()
+        void displaystudent()
         {
-            cout<<"Name of the student:"<<name<<endl<<"Program of the student:"<<program<<endl<<"Enrolled year:"<<enrolled_year<<endl;
-
+            displayuniversity();
+            displayaffiliated();
+            displayconstituent();
+            cout<<"Student name:"<<name<<endl<<"Student Program:"<<program<<endl<<"Enrolled year:"<<enrolled_year<<endl;
         }
+
 };
+
 int main()
 {
-    STUDENT s1("Pokhara University","Lekhnath","Ncit","Balkumari","5","Engineering","Dean","Science and Technology","Gaurav","BESE",2021);
-    s1.displayUniversity();
-    s1.displayAcollege();
-    s1.displayCcollege();
-    s1.displayStudent();
+    Student sobj("Pokhara","Lakeside","NCIT","Balkumari","Cosmos","Bibek","engineering","rakesh","software",2021);//2021 lai " "ma halna sakne mistake hunu sakchha
+    
+    sobj.displaystudent();
     return 0;
-
 }
-
-
