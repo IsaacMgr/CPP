@@ -1,0 +1,19 @@
+Data Abstraction is achieved in Object Oriented Programming (OOP) through the 
+use of classes and objects.
+A class defines the blueprint of an object and its attributes and behavior, 
+while hiding the implementation details of these attributes and behaviors 
+from the outside world. This abstraction of implementation details is called 
+encapsulation. By encapsulating the data, the class provides a clean and 
+well-defined interface to interact with the data, while hiding the complexity 
+of the implementation.
+For example, you could have a class Car that has attributes such as make, 
+model, and year, and methods such as start, drive, and stop. The class 
+provides a way for users to interact with these attributes and methods,
+but it does not reveal how these methods are implemented. This allows for 
+easy and consistent interaction with the object, as well as the ability to 
+change the implementation of the methods without affecting the users of the 
+class.
+Another aspect of data abstraction in OOP is inheritance, which allows a new 
+class to inherit the attributes and behaviors of an existing class. This 
+enables a derived class to reuse the implementation of the base class and to 
+extend it as needed, further promoting data abstraction and modularity.

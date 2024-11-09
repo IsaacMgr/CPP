@@ -1,0 +1,3 @@
+friend function is the non member function that can acess private and protected members of the class once it is declared as friend                  
+friend function can be global or the member function of the same class
+it degrades the importance of data hiding so it must be used only when it is required

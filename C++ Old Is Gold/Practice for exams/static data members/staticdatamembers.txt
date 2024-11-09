@@ -1,0 +1,7 @@
+data members can be declared static with the help of static keyword
+characteristics:
+    only one copy of static data member is created for each class.
+    all the objects of class share a single copy of static data member 
+    it is declared when all the objects of class need to share a common values
+    it is automatically initialized to zero by default before any object of the class is created.
+    

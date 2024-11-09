@@ -1,0 +1,6 @@
+Enumeration datatype is a user defined datatype that allows user to specify the number of possible
+values that can be assigned to the variable.
+enum name
+{
+    enum1,enum2........;
+}

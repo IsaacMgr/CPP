@@ -1,0 +1,5 @@
+Code Simplicity: You can call the function without specifying values for all of its parameters, reducing the amount of code you need to write and making it easier to read.
+Improved Function Reusability: You can reuse the function with different sets of parameters, making it more versatile and flexible.
+Increased Function Overloading: You can have multiple versions of the same function with different default argument values, reducing the need for separate functions with similar functionality.
+Improved Readability: Default arguments can make it easier to understand what a function does and how it should be used.
+Backwards Compatibility: You can add default arguments to existing functions without breaking existing code that calls the function, preserving backwards compatibility.

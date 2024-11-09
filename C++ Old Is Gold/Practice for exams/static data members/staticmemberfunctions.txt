@@ -1,0 +1,5 @@
+they are independent on any particular objects
+they cannot acess non static data members
+they can be acessed even before any object of the class is created
+
+    static returntype functionname(parameterlist)

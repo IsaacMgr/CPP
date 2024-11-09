@@ -1,0 +1,17 @@
+pop:
+It follow top bottom approach
+programs are divided into functions and they interact
+adding new functions and data is not easy.
+no data hiding is present.Data are globally present
+It is not suitable to solve complex problems.
+inheritance is not supported.
+c,fortran,pascal,etc.
+
+oop:
+It follows bottom up approach.
+Programs are divided into classes and objects.
+Inheritance is supported.
+Encapsulation is used for data hiding.
+Adding new data and functions is easy.
+It is suitable for solving complex problems.
+C++,java,c#...

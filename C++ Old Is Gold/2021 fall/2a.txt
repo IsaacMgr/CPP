@@ -1,0 +1,21 @@
+A friend function in C++ is a function that is declared as a friend of a class. It has access to the private and protected members of the class, even though it is not a member of the class itself.
+
+In this sense, it can be said that friend functions breach encapsulation, as they provide a way for non-member functions to access the internal details of a class. Encapsulation is one of the fundamental principles of object-oriented programming and is used to ensure that the implementation details of a class are hidden from the outside world, providing a layer of abstraction that protects the class's behavior and state from unwanted interference.
+
+For example, consider a class Rectangle with private members width and height. A friend function printArea that calculates and prints the area of a Rectangle object could be declared as follows:
+
+c
+Copy code
+class Rectangle {
+  private:
+    int width;
+    int height;
+    friend void printArea(Rectangle &r);
+};
+
+void printArea(Rectangle &r) {
+  cout << "Area: " << r.width * r.height << endl;
+}
+In this example, the friend function printArea can access the private members width and height of the Rectangle class, even though it is not a member of the class itself. This breach of encapsulation allows the printArea function to perform its calculation, but it also means that the internal state of the Rectangle class can be manipulated or accessed by functions outside the class.
+
+It's worth noting that while friend functions can provide useful functionality, they should be used with caution and only when necessary, as they can weaken the protection provided by encapsulation and make code more difficult to maintain.
